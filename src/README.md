@@ -1,0 +1,1 @@
+This is a project for recording the solution of Leetcode
