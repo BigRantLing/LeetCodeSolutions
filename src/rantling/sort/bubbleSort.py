@@ -5,7 +5,7 @@ class bubbleSort(object):
 
     def sort(self, list_to_sort: list) -> list:
         length = len(list_to_sort)
-        if length == 0:
+        if length == 0 or length == 1:
             return list_to_sort
         # python 的range是左闭右开
         # 外部的i记录有多少的元素排好序了
