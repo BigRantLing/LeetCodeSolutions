@@ -3,6 +3,8 @@
 
 class Solution:
     def solve(self, board):
+        if len(board) == 0:
+            return
         self.board_higth = len(board)
         self.board_with = len(board[0])
         self.board = board
@@ -43,20 +45,20 @@ class Solution:
         if row - 1 > 0 and self.board[row-1][col] == 'O':
             adjacency_list.append((row - 1, col))
 
-        if row + 1 < self.board_with - 1 and self.board[row+1][col] == 'O':
+        if row + 1 < self.board_higth and self.board[row+1][col] == 'O':
             adjacency_list.append((row + 1, col))
 
         if col - 1 > 0 and self.board[row][col-1] == 'O':
             adjacency_list.append((row, col - 1))
 
-        if col + 1 < self.board_higth - 1 and self.board[row][col+1] == 'O':
+        if col + 1 < self.board_with and self.board[row][col+1] == 'O':
             adjacency_list.append((row, col + 1))
 
         return adjacency_list
 
 
 if __name__ == '__main__':
-    Solution().solve([["X", "X", "X", "X"],
-                      ["X", "O", "O", "X"],
-                      ["X", "X", "O", "X"],
-                      ["X", "O", "X", "X"]])
+    Solution().solve([["X", "O", "X", "O", "X", "O"],
+                      ["O", "X", "O", "X", "O", "X"],
+                      ["X", "O", "X", "O", "X", "O"],
+                      ["O", "X", "O", "X", "O", "X"]])
