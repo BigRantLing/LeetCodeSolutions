@@ -10,7 +10,7 @@ class Solution(object):
 
         if father == 0:
             return 0 if K % 2 == 1 else 1
-        if father == 1:
+        else:
             return 0 if K % 2 == 0 else 1
 
 
