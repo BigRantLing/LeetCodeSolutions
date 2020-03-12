@@ -5,6 +5,7 @@ class Solution:
     def solve(self, board):
         if len(board) == 0:
             return
+
         self.board_higth = len(board)
         self.board_with = len(board[0])
         self.board = board

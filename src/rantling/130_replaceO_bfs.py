@@ -23,7 +23,7 @@ class Solution:
 
         # 遍历第一列和最后一列
         for col in (0, self.board_width-1):
-            for col in range(0, self.board_higth):
+            for cow in range(0, self.board_higth):
                 if self.board[row][col] == 'O':
                     self.queue.put((row, col))
                     while self.queue.qsize() > 0:
@@ -38,7 +38,7 @@ class Solution:
                 else:
                     self.board[row][col] = 'X'
                     print('X', end='    ')
-            print('\n')   
+            print('\n')
 
     def __bfs(self, row, col):
         if self.board[row][col] != '#':
