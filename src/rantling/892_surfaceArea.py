@@ -4,7 +4,7 @@ class Solution:
         self.N = len(grid)
         for row in range(0,  self.N):
             self.marker.append([False]*self.N)
-               
+ 
         self.grid = grid
         total_area = 0
 
@@ -27,8 +27,6 @@ class Solution:
         for neb in nebs:
             neb_ammount = self.grid[neb[0]][neb[1]]
             area -= cube_ammount if cube_ammount <= neb_ammount else neb_ammount
-
-        print("%d area %d" % (cube_ammount, area))
 
         for neb in nebs:
             area += self.__dfs(neb[0], neb[1])
